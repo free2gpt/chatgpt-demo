@@ -5,6 +5,7 @@ interface InfoType { is_show: number, text: string, list: Array<any>, batch1: Ar
 export default () => {
   const [info, setInfo] = createSignal<InfoType>({ is_show: 1, text: '', list: [], batch1: [], batch2: [] })
   const [remain, setRemain] = createSignal(0)
+  const [show, setShow] = createSignal(0)
 
   onMount(async() => {
     getInfo()
